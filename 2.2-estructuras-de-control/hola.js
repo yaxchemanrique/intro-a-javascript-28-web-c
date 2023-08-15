@@ -23,3 +23,13 @@ if(tarjeta !== null) {
 } else {
     console.log('Este usuario no puede tener una tarjeta')
 }
+
+let mexicoPopulation = 130 
+
+let message = mexicoPopulation >= 33 ? 'encima' : 'debajo';
+
+console.log(`México tiene una población por ${message} del promedio`)
+
+
+
+

@@ -1,0 +1,15 @@
+body {
+	background: rgb(255, 247, 202);
+}
+/* 
+h1 {
+	background-color: steelblue;
+} */
+.fondo {
+	background-color: darkgoldenrod;
+}
+
+button {
+	display: block;
+	font-size: 30px;
+}

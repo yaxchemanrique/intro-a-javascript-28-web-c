@@ -7,23 +7,10 @@ function addToInbox() {
     if(taskContent !== ''){
         const task = document.createElement('p');
         // task.textContent = taskContent;
-        task.innerHTML = `<span>${taskContent}</span> <button class="delete-button">x</button>`;
+        task.innerHTML = `<span>${taskContent}</span> 
+                    <button class="delete-button">x</button>`;
         inboxSection.appendChild(task);
         input.value = '';
-
-        let deleteButton = document.getElementsByClassName('delete-button');
-        for (let i = 0; i < deleteButton.length; i++) {
-            deleteButton[i].addEventListener('click', 
-            
-        function deleteTask(event) {
-            // console.log(event.target.parentNode);
-            // const span = event.target.parentNode;
-            inboxSection.removeChild(task);
-        });
-            
-        }
-        
-
     } else {
         alert('Ingresa una tarea válida');
     }
@@ -31,6 +18,13 @@ function addToInbox() {
 
 button.addEventListener('click', addToInbox);
 
+function removeTask(e) {
+    // console.log(e.target)
+    if (e.target.className === 'delete-button' ) {
+        const removedTask= e.target.parentElement;
+        // console.log(removedTask)
+        inboxSection.removeChild(removedTask);
+    }
+}
 
-
-
+inboxSection.addEventListener('click', removeTask)

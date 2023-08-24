@@ -11,7 +11,7 @@
 			crossorigin="anonymous"
 		/>
 		<!-- Link estilos propios -->
-		<link rel="stylesheet" href="style.css" />
+		<!-- <link rel="stylesheet" href="style.css" /> -->
 		<title>Document</title>
 		<!-- Script Bootstrap -->
 		<script
@@ -22,6 +22,7 @@
 		></script>
 		<script defer src="./app.js"></script>
 	</head>
+
 	<body>
 		<div class="accordion accordion-flush" id="accordionFlushExample">
 			<div class="accordion-item">
@@ -61,7 +62,7 @@
 			<div class="card-header">Adivina el numero secreto</div>
 			<div class="card-body">
 				<h5 class="card-title">Numero Secreto:</h5>
-				<p class="card-text">?</p>
+				<p class="card-text" id="secret-number">?</p>
 				<div class="form-floating mb-3">
 					<input
 						type="number"
@@ -71,8 +72,14 @@
 					/>
 					<label for="floatingInput">Tu respuesta</label>
 				</div>
-				<a href="#" class="btn btn-primary">Revisar!</a>
+				<button id="check-button" class="btn btn-primary">Revisar!</button>
 			</div>
+		</div>
+		<div class="alert alert-primary" role="alert" id="hint">
+			Empieza a adivinar...
+		</div>
+		<div class="alert alert-primary" role="alert">
+			Score: <strong id="score">20</strong>
 		</div>
 	</body>
 </html>

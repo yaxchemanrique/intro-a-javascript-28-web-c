@@ -18,13 +18,24 @@ function addToInbox() {
 
 button.addEventListener('click', addToInbox);
 
-function removeTask(e) {
-    // console.log(e.target)
-    if (e.target.className === 'delete-button' ) {
-        const removedTask= e.target.parentElement;
+function removeTask(event) {
+    // console.log(event.target);
+    if (event.target.className === 'delete-button' ) {
+        const removedTask= event.target.parentElement;
         // console.log(removedTask)
         inboxSection.removeChild(removedTask);
     }
 }
 
 inboxSection.addEventListener('click', removeTask)
+
+/*
+
+const event =  {
+    target: 'ElTarget',
+};
+
+event.target ===  'ElTarget';
+*/
+
+
